@@ -1,4 +1,4 @@
-package com.batu.workify
+package com.capbatu.workify
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

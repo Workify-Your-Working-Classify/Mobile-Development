@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.batu.workify"
+    namespace = "com.capbatu.workify"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.batu.workify"
+        applicationId = "com.capbatu.workify"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
