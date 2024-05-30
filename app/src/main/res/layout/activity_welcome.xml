@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.welcome.WelcomeActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_meditation"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toTopOf="@id/ln_app_info"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation_meditation"
+        tools:alpha="100" />
+
+    <LinearLayout
+        android:id="@+id/ln_app_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@+id/ln_app_action"
+        app:layout_constraintTop_toBottomOf="@id/lottie_meditation">
+
+        <TextView
+            android:id="@+id/tv_app_title"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:text="@string/app_name"
+            android:textAlignment="textEnd"
+            app:fontFamily="@font/supermercado"
+            tools:alpha="100" />
+
+        <TextView
+            android:id="@+id/tv_app_desc"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:maxEms="8"
+            android:text="@string/app_desc"
+            android:textAlignment="textEnd"
+            app:fontFamily="@font/roboto_regular"
+            tools:alpha="100" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_app_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ln_app_info">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:text="@string/btn_login"
+            tools:alpha="100" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:text="@string/btn_signup"
+            tools:alpha="100" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
