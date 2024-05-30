@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".ui.forgot.ForgotPassActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_annoy"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_rawRes="@raw/animation_annoy"
+        tools:alpha="100" />
+
+    <LinearLayout
+        android:id="@+id/ll_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_forgot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lottie_annoy"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:alpha="100">
+
+        <TextView
+            android:id="@+id/tv_forgot"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_forgot_pass"
+            app:fontFamily="@font/roboto_regular" />
+
+        <TextView
+            android:id="@+id/tv_forgot_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_hint_forgot_pass"
+            android:textStyle="bold" />
+
+        <com.capbatu.workify.view.EmailEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTint="?attr/colorOnBackground"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="16dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_forgot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:alpha="0"
+        android:text="@string/btn_forgot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lottie_annoy"
+        app:layout_constraintTop_toBottomOf="@+id/ll_form"
+        tools:alpha="100" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
