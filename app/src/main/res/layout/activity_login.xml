@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".ui.login.LoginActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_worry"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toTopOf="@id/ll_form"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation_worry"
+        tools:alpha="100" />
+
+    <LinearLayout
+        android:id="@+id/ll_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/lottie_worry"
+        tools:alpha="100">
+
+        <TextView
+            android:id="@+id/tv_login"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_login"
+            app:fontFamily="@font/roboto_regular" />
+
+        <com.capbatu.workify.view.EmailEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTint="?attr/colorOnBackground"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="16dp" />
+
+        <com.capbatu.workify.view.PasswordEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTint="?attr/colorOnBackground"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="16dp" />
+
+        <TextView
+            android:id="@+id/tv_forgot_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_forgot_pass"
+            android:textAlignment="textEnd"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:text="@string/hint_btn_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:alpha="100" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
