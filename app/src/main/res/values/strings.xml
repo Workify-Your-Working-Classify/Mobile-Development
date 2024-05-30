@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">WorkiFy</string>
+    <string name="regex_email">^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$</string>
+    <string name="hint_input_email">Email</string>
+    <string name="err_not_an_email">Email format is incorrect</string>
+    <string name="regex_password">^.{8,}$</string>
+    <string name="hint_input_password">Password</string>
+    <string name="err_not_a_password">Password must be more than 8 characters</string>
+    <string name="hint_input_name">Name</string>
+    <string name="err_input_reqired">Field is required</string>
+    <string name="app_desc">Plan your activities\nwith us</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_signup">Register</string>
 </resources>
