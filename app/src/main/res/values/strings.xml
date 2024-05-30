@@ -11,4 +11,14 @@
     <string name="app_desc">Plan your activities\nwith us</string>
     <string name="btn_login">Login</string>
     <string name="btn_signup">Register</string>
+    <string name="tv_register">Sign Up</string>
+    <string name="tv_login">Sign In</string>
+    <string name="hint_btn_login">Enter</string>
+    <string name="hint_btn_signup">Register</string>
+    <string name="tv_forgot_pass">Forgot password?</string>
+    <string name="tv_hint_forgot_pass">fill in your email first, so we can help you find your account..</string>
+    <string name="btn_forgot">Find</string>
+    <string name="tv_reset_pass">Reset password</string>
+    <string name="tv_hint_reset_pass">I found the account, let\'s create a new password..</string>
+    <string name="btn_reset">Reset</string>
 </resources>
