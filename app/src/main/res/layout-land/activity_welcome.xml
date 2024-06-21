@@ -23,6 +23,7 @@
         android:id="@+id/ll_app_info"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@+id/ll_app_action"
@@ -30,28 +31,37 @@
         app:layout_constraintStart_toEndOf="@+id/lottie_meditation"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:alpha="0"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_workify"
+            tools:alpha="100" />
+
         <TextView
             android:id="@+id/tv_app_title"
             style="@style/TextAppearance.MaterialComponents.Headline3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0"
             android:text="@string/app_name"
-            android:textAlignment="textEnd"
             app:fontFamily="@font/supermercado"
             tools:alpha="100" />
 
         <TextView
             android:id="@+id/tv_app_desc"
             style="@style/TextAppearance.MaterialComponents.Headline5"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0"
             android:maxEms="8"
             android:text="@string/app_desc"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             app:fontFamily="@font/roboto_regular"
             tools:alpha="100" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -71,12 +81,14 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:text="@string/btn_login" />
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="@string/btn_signup" />
     </LinearLayout>
 

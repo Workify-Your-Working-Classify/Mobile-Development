@@ -8,6 +8,18 @@
     android:padding="24dp"
     tools:context=".ui.register.RegisterActivity">
 
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="?attr/colorPrimary"
+        android:contentDescription="@string/cd_back"
+        android:padding="8dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_confuse"
         android:layout_width="300dp"
@@ -44,19 +56,28 @@
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTint="?attr/colorOnBackground" />
+            android:layout_marginVertical="2dp"
+            android:drawableTint="?attr/colorOnBackground"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp" />
 
         <com.capbatu.workify.view.EmailEditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTint="?attr/colorOnBackground" />
+            android:layout_marginVertical="2dp"
+            android:drawableTint="?attr/colorOnBackground"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp" />
 
         <com.capbatu.workify.view.PasswordEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTint="?attr/colorOnBackground" />
+            android:layout_marginVertical="2dp"
+            android:drawableTint="?attr/colorOnBackground"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp" />
 
     </LinearLayout>
 
@@ -64,13 +85,25 @@
         android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:alpha="0"
         android:layout_margin="16dp"
+        android:alpha="0"
+        android:enabled="false"
         android:text="@string/hint_btn_signup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lottie_confuse"
         app:layout_constraintTop_toBottomOf="@+id/ll_form"
         tools:alpha="100" />
+
+    <ProgressBar
+        android:id="@+id/pb_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
