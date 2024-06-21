@@ -42,12 +42,13 @@ class WelcomeActivity : AppCompatActivity() {
     private fun playAnimation() {
         binding.apply {
             val lottie = ObjectAnimator.ofFloat(lottieMeditation, View.ALPHA, 1f).setDuration(3000)
+            val ivLogo = ObjectAnimator.ofFloat(ivLogo, View.ALPHA, 1f).setDuration(1000)
             val tvTitle = ObjectAnimator.ofFloat(tvAppTitle, View.ALPHA, 1f).setDuration(2000)
             val tvDesc = ObjectAnimator.ofFloat(tvAppDesc, View.ALPHA, 1f).setDuration(2000)
             val llAction = ObjectAnimator.ofFloat(llAppAction, View.ALPHA, 1f).setDuration(1000)
 
             AnimatorSet().apply {
-                playSequentially(lottie, tvTitle, tvDesc, llAction)
+                playSequentially(lottie, ivLogo, tvTitle, tvDesc, llAction)
                 start()
             }
         }
