@@ -2,8 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.dagger.hilt.android)
-    alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -27,11 +27,17 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
+            buildConfigField("String", "API_BASE_URL", "\"https://workify-426005.et.r.appspot.com/api/\"")
+        }
+        debug {
+            buildConfigField("String", "API_BASE_URL", "\"https://workify-426005.et.r.appspot.com/api/\"")
         }
     }
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
+        mlModelBinding = true
     }
 
     compileOptions {
@@ -53,6 +59,10 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.viewpager2)
     implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.datastore.preferences.core)
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -62,7 +72,10 @@ dependencies {
     implementation(libs.logging.interceptor)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
+    implementation(libs.tensorflow.lite)
+
     implementation(libs.lottie)
+    implementation(libs.circleimageview)
 
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
