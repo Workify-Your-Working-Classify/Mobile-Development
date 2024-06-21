@@ -19,9 +19,6 @@
             android:name=".ui.describe.DescribeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.addActivity.AddTaskActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.reset.ResetActivity"
             android:exported="false" />
         <activity
