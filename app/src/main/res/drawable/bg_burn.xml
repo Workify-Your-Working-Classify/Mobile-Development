@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:angle="-90"
+                android:centerColor="#34FFAA00"
+                android:endColor="#00FFAA00"
+                android:startColor="#FFAA00"
+                android:type="linear" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:alpha="0.05"
+            android:gravity="fill_vertical"
+            android:src="@drawable/bg_doodles" />
+    </item>
+</layer-list>
