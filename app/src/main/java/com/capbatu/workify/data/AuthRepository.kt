@@ -1,5 +1,6 @@
 package com.capbatu.workify.data
 
+import android.util.Log
 import com.capbatu.workify.data.local.AuthModel
 import com.capbatu.workify.data.local.AuthPreferences
 import com.capbatu.workify.data.remote.request.LoginRequest
@@ -32,7 +33,7 @@ class AuthRepository
                 } catch (e: Exception) {
                     emit(Result.failure(e))
                 }
-            }.flowOn(Dispatchers.IO)
+            }
 
         suspend fun register(request: RegisterRequest): Flow<Result<RegisterResponse>> =
             flow {
@@ -43,9 +44,10 @@ class AuthRepository
                         ),
                     )
                 } catch (e: Exception) {
+                    Log.d("register error", "$request ${request.email} ${request.password}")
                     emit(Result.failure(e))
                 }
-            }.flowOn(Dispatchers.IO)
+            }
 
         suspend fun getUser(userId: String): Flow<Result<UserResponse>> =
             flow {

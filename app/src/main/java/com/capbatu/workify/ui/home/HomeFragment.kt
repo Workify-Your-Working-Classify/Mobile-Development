@@ -70,11 +70,13 @@ class HomeFragment : Fragment() {
             viewModel.getAuthSession().observe(viewLifecycleOwner) { session ->
                 user = session
 
-                updateUI()
-                setupRecyleView()
-                observeData()
-                observePoint()
-                setupAction()
+                if (session.isLogin) {
+                    updateUI()
+                    setupRecyleView()
+                    observeData()
+                    observePoint()
+                    setupAction()
+                }
             }
         }
     }

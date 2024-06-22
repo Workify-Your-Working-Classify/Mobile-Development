@@ -101,9 +101,9 @@ class RegisterActivity : AppCompatActivity() {
 
                 registerJob =
                     launch {
-                        viewModel.register(name, email, password)
+                        viewModel.register(displayName = name, email = email, password = password)
                             .collect { result ->
-                                result.onSuccess { response ->
+                                result.onSuccess { _ ->
                                     Intent(
                                         this@RegisterActivity,
                                         LoginActivity::class.java,

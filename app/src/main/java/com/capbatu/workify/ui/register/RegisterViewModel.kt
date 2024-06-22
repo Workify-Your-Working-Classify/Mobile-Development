@@ -18,5 +18,12 @@ class RegisterViewModel
             displayName: String,
             email: String,
             password: String,
-        ): Flow<Result<RegisterResponse>> = authRepository.register(RegisterRequest(displayName, email, password))
+        ): Flow<Result<RegisterResponse>> =
+            authRepository.register(
+                RegisterRequest(
+                    displayName = displayName,
+                    email = email,
+                    password = password,
+                ),
+            )
     }

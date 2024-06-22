@@ -12,7 +12,6 @@ import androidx.lifecycle.lifecycleScope
 import com.capbatu.workify.R
 import com.capbatu.workify.Utils.showToast
 import com.capbatu.workify.databinding.FragmentSettingBinding
-import com.capbatu.workify.ui.welcome.WelcomeActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -60,9 +59,7 @@ class SettingFragment : Fragment() {
                 launch {
                     viewModel.logout().collect { result ->
                         result.onSuccess { _ ->
-                            Intent(requireContext(), WelcomeActivity::class.java).also { intent ->
-                                startActivity(intent)
-                            }
+                            viewModel.removeSession()
                             showToast(requireContext(), getString(R.string.toast_logout_succesfull))
                         }
                         result.onFailure { response ->
